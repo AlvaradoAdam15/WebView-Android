@@ -2,6 +2,7 @@ package adam.dam2.iesebre.com.webviewexample;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,6 +13,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         WebView myWebView = (WebView) this.findViewById(R.id.webView);
-        myWebView.loadUrl("acacha.org");
+        myWebView.loadUrl("http://www.iesebre.com/");
+
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
     }
 }
